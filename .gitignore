@@ -1,0 +1,23 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+tmp/
+
+# Vendor
+vendor/
+
+# Environment
+.env
+
+# Swagger docs (auto-generated)
+docs/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
