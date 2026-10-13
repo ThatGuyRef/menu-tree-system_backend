@@ -31,7 +31,7 @@ func NewMenuRepository(db *gorm.DB) MenuRepository {
 // FindAll returns all menus ordered by parent and sort order
 func (r *menuRepository) FindAll() ([]models.Menu, error) {
 	var menus []models.Menu
-	err := r.db.Order("sort_order ASC").Find(&menus).Error
+	err := r.db.Preload("Parent").Order("sort_order ASC").Find(&menus).Error
 	return menus, err
 }
 
